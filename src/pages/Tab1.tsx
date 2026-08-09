@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonToolbar, IonIcon} from '@ionic/react';
 import { Grid } from '@mui/material';
 import { useState } from 'react';
 import HeaderUI from '../components/HeaderUI';
@@ -10,6 +10,7 @@ import TableUI from '../components/TableUI';
 import ChartUI from '../components/ChartUI';
 import AdditionalInfoUI from '../components/AdditionalInfoUI';
 import './Tab1.css';
+import { partlySunny } from 'ionicons/icons';
 
 const Tab1: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -18,6 +19,13 @@ const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
+        <IonToolbar>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px', padding: '4px 0' }}>
+            <IonIcon icon={partlySunny} style={{ fontSize: '18px', color: '#798bb3' }} />
+            <span style={{ color: '#6b7280', fontSize: '0.85rem', fontWeight: 500 }}>
+              </span>
+              </div>
+        </IonToolbar>
       </IonHeader>
       <IonContent fullscreen style={{ '--background': '#f4f6f8' } as React.CSSProperties}>
         <Grid container spacing={5} sx={{ justifyContent: "left", alignItems: "center", padding: 2 }}>
