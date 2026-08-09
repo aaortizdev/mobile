@@ -18,11 +18,8 @@ const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Dashboard del Clima</IonTitle>
-        </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent fullscreen style={{ '--background': '#f4f6f8' } as React.CSSProperties}>
         <Grid container spacing={5} sx={{ justifyContent: "left", alignItems: "center", padding: 2 }}>
           {/* Encabezado */}
           <Grid size={{ xs: 12, md: 12 }}>

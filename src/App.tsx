@@ -1,3 +1,5 @@
+import { ThemeProvider, CssBaseline } from '@mui/material';
+import theme from './theme';
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
@@ -40,18 +42,21 @@ import './theme/variables.css';
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        <Route exact path="/tab1">
-          <Tab1 />
-        </Route>
-        <Route exact path="/">
-          <Redirect to="/tab1" />
-        </Route>
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
+    <IonApp>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          <Route exact path="/tab1">
+            <Tab1 />
+          </Route>
+          <Route exact path="/">
+            <Redirect to="/tab1" />
+          </Route>
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
+  </ThemeProvider>
 );
 
 export default App;

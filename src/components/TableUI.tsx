@@ -23,13 +23,13 @@ const columns: GridColDef[] = [
     },
     {
         field: 'value1',
-        headerName: 'Temp.',
-        width: 90,
+        headerName: 'Temp. (°C)',
+        width: 115,
     },
     {
         field: 'value2',
-        headerName: 'Velocidad del viento',
-        width: 170,
+        headerName: 'Velocidad del viento (km/h)',
+        width: 225,
     },
 ];
 
